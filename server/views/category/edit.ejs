@@ -4,7 +4,7 @@
         <div class="card-body">
             <div class="card-header">
                 <div class="card-title">
-                    <h3>Add Category Page</h3>
+                    <h3>Edit Category Page</h3>
                 </div>
             </div>
         </div>
@@ -17,11 +17,12 @@
                     <div class="table-responsive">
                         <div class="card shadow mb-4">
                             <div class="card-body">
-                                    <form action="/categories/add" method="POST">
+                                    <form action="/categories/update" method="POST">
+                                        <input type="hidden" name="id" value="<%= data.id %>">
                                         <div class="col-12 d-flex">
-                                            <div class="col-12 mt-2">
+                                            <div class="col-12 mt-2">  
                                                     <label for="name">Category Name</label>
-                                                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter name...">
+                                                    <input type="text" id="name" value="<%= data.name %>" name="name" class="form-control" placeholder="Enter name...">
                                             </div>
                                         </div>
 

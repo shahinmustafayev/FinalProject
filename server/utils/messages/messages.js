@@ -3,6 +3,12 @@ const DATA_SUCCESSFULLY = "Data Successfully";
 const DATA_NOT_FOUND = "Data not found";
 // Data Messages End
 
+// Data Add,Edit and DELETE , UPDATE Successfully 
+const DATA_EDIT_SUCCESSFULLY = "Data Edit Successfully";
+const DATA_ADD_SUCCESSFULLY = "Data Add Successfully";
+const DATA_DELETE_SUCCESSFULLY = "Data Delete Successfully";
+const DATA_UPDATE_SUCCESSFULLY = "Data Update Succesffully";
+
 // User messages Start
 const USER_NOT_FOUND = "User Not Found";
 const USER_FOUND_SUCCESSFULLY = "User found successfully";
@@ -30,6 +36,10 @@ const CATEGORY_DELETED_SUCCESSFULLY = 'Category Deleted Successfully';
 
 module.exports = {
     DATA_SUCCESSFULLY,
+    DATA_ADD_SUCCESSFULLY,
+    DATA_DELETE_SUCCESSFULLY,
+    DATA_EDIT_SUCCESSFULLY,
+    DATA_UPDATE_SUCCESSFULLY,
     DATA_NOT_FOUND,
     USER_NOT_FOUND,
     USER_FOUND_SUCCESSFULLY,

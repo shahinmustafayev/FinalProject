@@ -38,24 +38,18 @@
                                         <thead>
                                             <tr>
                                                 <th>Name</th>
-                                                <th>Description</th>
-                                                <th>Status</th>
-                                                <th>Image</th>
                                                 <th>Created_at</th>
                                                 <th>Updated_at</th>
-                                                <th>Is Deleted</th>
+                                                <!-- <th>Is Deleted</th> -->
                                                 <th>Operations</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
                                                 <th>Name</th>
-                                                <th>Description</th>
-                                                <th>Status</th>
-                                                <th>Image</th>
                                                 <th>Created_at</th>
                                                 <th>Updated_at</th>
-                                                <th>Is Deleted</th>
+                                                <!-- <th>Is Deleted</th> -->
                                                 <th>Operations</th>
                                             </tr>
                                         </tfoot>
@@ -63,15 +57,29 @@
                                             <% data.forEach(x => { %>
                                                 <tr>
                                                     <td><%= x.name %></td>
-                                                    <td><%= x.description %></td>
-                                                    <td><%= x.status %></td>
-                                                    <td><%= x.image %></td>
-                                                    <td><%= new Date(x.created_at).toISOString().slice(0, 19) %></td>
-                                                    <td><%= new Date(x.updated_at).toISOString().slice(0, 19) %></td>
-                                                    <td><%= x.isdeleted %></td>
+                                                    <td>
+                                                        <%= new Date(x.created_at).toLocaleString('en-US', { 
+                                                            month: '2-digit', 
+                                                            day: '2-digit', 
+                                                            year: 'numeric', 
+                                                            hour: '2-digit', 
+                                                            minute: '2-digit', 
+                                                            hour12: false 
+                                                        }) %>
+                                                    </td>
+                                                    <td>
+                                                    <%= new Date(x.updated_at).toLocaleString('en-US', { 
+                                                        month: '2-digit', 
+                                                        day: '2-digit', 
+                                                        year: 'numeric', 
+                                                        hour: '2-digit', 
+                                                        minute: '2-digit', 
+                                                        hour12: false 
+                                                    }) %>
+                                                    </td>
                                                     <td>
                                                         <a class="btn btn-warning" href="/categories/edit/<%= x.id %>">Edit</a>
-                                                        <a class="btn btn-danger mt-3" href="/categories/delete/<%= x.id %>">Delete</a>
+                                                        <a class="btn btn-danger" href="/categories/delete/<%= x.id %>">Delete</a>
                                                     </td>
                                                 </tr>
                                             <% }) %>

@@ -1,3 +1,5 @@
+const CategoryAddDTO = require('../models/category/category-add-dto');
+const CategoryUpdateDTO = require('../models/category/category-edit-dto');
 const categoryService = require('../services/category-service');
 
 const getCategoryView = async (req, res) => {
@@ -15,11 +17,38 @@ const addCategoryView = async (req,res) => {
 }
 
 const addCategoryData = async (req,res) => {
-    console.log(req.body);
+    const categoryAddDTO = new CategoryAddDTO(req.body);
+    const result = await categoryService.addCategory(categoryAddDTO);
+    if(result.success)
+        res.redirect('/categories');
+}
+
+const getCategoryEditView = async (req,res) => {
+    const id = req.params.id;
+    const result = await categoryService.getOneCategory(id);
+    if(result.success)
+        res.render('category/edit', {data: result.data});
+}
+
+const updateCategory = async (req,res) => {
+    const categoryUpdateDto = new CategoryUpdateDTO(req.body);
+    const result = await categoryService.updateCategory(categoryUpdateDto);
+    if(result.success)
+        res.redirect('/categories');
+}
+
+const deleteCategory = async (req,res) => {
+    const id = req.params.id;
+    const result = await categoryService.deleteCategory(id);
+    if(result.success)
+        res.redirect('/categories');
 }
 
 module.exports = {
     getCategoryView,
     addCategoryView,
-    addCategoryData
+    addCategoryData,
+    getCategoryEditView,
+    updateCategory,
+    deleteCategory
 }
