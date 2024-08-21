@@ -21,10 +21,11 @@ const PASSWORD_INCORRECT = 'Password incorrect'
 const LOGIN_SUCCESSFULLY = 'Login Successfully'
 
 // Product Start
-const PRODUCT_FOUND_SUCCESSFULLY = 'Product Found Successfully';
-const PRODUCT_NOT_FOUND = 'Product Not Found';
-const PRODUCT_ADDED_SUCCESSFULLY = 'Product Added Successfully';
+const PRODUCT_FOUND_SUCCESSFULLY   = 'Product Found Successfully';
+const PRODUCT_NOT_FOUND            = 'Product Not Found';
+const PRODUCT_ADDED_SUCCESSFULLY   = 'Product Added Successfully';
 const PRODUCT_DELETED_SUCCESSFULLY = 'Product Deleted Successfully';
+const PRODUCT_UPDATED_SUCCESSFULLY = 'Product Updated Successfully';
 // Product End
 
 // Category Start
@@ -51,6 +52,7 @@ module.exports = {
     PRODUCT_ADDED_SUCCESSFULLY,
     PRODUCT_DELETED_SUCCESSFULLY,
     PRODUCT_NOT_FOUND,
+    PRODUCT_UPDATED_SUCCESSFULLY,
     CATEGORY_ADDED_SUCCESSFULLY,
     CATEGORY_DELETED_SUCCESSFULLY,
     CATEGORY_FOUND_SUCCESSFULLY,

@@ -1,0 +1,118 @@
+<%- include('../layout/header');  %>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <div class="card-header">
+                <div class="card-title">
+                    <h3>Products</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <div class="row mx-0 mt-2">
+                <div class="col-3">
+                    <a href="/product/add" class="btn btn-primary btn-block">Add</a>
+                </div>
+                <div class="col-3 offset-6">
+                    <input type="text" placeholder="Search..." class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <div class="row mx-0 mt-3">
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Product</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Description</th>
+                                                <th>Image</th>
+                                                <th>Model</th>
+                                                <th>Price</th>
+                                                <th>Old Price</th>
+                                                <th>Category Id</th>
+                                                <th></th>
+                                                <th>Created_at</th>
+                                                <th>Updated_at</th>
+                                                <th>IsDeleted</th>
+                                                <th>Operations</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Description</th>
+                                                <th>Image</th>
+                                                <th>Model</th>
+                                                <th>Price</th>
+                                                <th>Old Price</th>
+                                                <th>Category Id</th>
+                                                <th></th>
+                                                <th>Created_at</th>
+                                                <th>Updated_at</th>
+                                                <th>IsDeleted</th>
+                                                <th>Operations</th>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <% data.forEach(x => { %>
+                                                <tr>
+                                                    <td><%= x.name %></td>
+                                                    <td><%= x.description %></td>
+                                                    <td><%= x.image %></td>
+                                                    <td><%= x.price %></td>
+                                                    <td><%= x.old_price %></td>
+                                                    <td><%= x.categoryId %></td>
+                                                    <td><%= x.price %></td>
+                                                    <td>
+                                                        <%= new Date(x.created_at).toLocaleString('en-US', { 
+                                                            month: '2-digit', 
+                                                            day: '2-digit', 
+                                                            year: 'numeric', 
+                                                            hour: '2-digit', 
+                                                            minute: '2-digit', 
+                                                            hour12: false 
+                                                        }) %>
+                                                    </td>
+                                                    <td>
+                                                    <%= new Date(x.updated_at).toLocaleString('en-US', { 
+                                                        month: '2-digit', 
+                                                        day: '2-digit', 
+                                                        year: 'numeric', 
+                                                        hour: '2-digit', 
+                                                        minute: '2-digit', 
+                                                        hour12: false 
+                                                    }) %>
+                                                    </td>
+                                                    <td><%= x.isdeleted %></td>
+                                                    <td>
+                                                        <a class="btn btn-warning" href="/categories/edit/<%= x.id %>">Edit</a>
+                                                        <a class="btn btn-danger" href="/categories/delete/<%= x.id %>">Delete</a>
+                                                    </td>
+                                                </tr>
+                                            <% }) %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<%- include('../layout/footer');  %>
