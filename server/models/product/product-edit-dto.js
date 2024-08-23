@@ -8,6 +8,7 @@ class ProductEditDTO {
         this.price = requestData.price,
         this.old_price = requestData.old_price,
         this.categoryid = requestData.categoryid,
+        this.isdeleted = requestData.isdeleted,
         this.date = requestData.date
     }
 }

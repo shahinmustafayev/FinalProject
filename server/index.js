@@ -14,6 +14,7 @@ const PORT = process.env.PORT || 3004;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use('/uploads', express.static('uploads'));
 app.use(express.static('public'));
 app.use(express.static('static'));
 

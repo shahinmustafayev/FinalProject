@@ -1,0 +1,108 @@
+<%- include('../layout/header');  %>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <div class="card-header">
+                <div class="card-title">
+                    <h3>Edit Product Page</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <div class="row mx-0 mt-3">
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <div class="card shadow mb-4">
+                            <div class="card-body">
+                                    <form action="/product/update" method="POST" enctype="multipart/form-data">
+                                        <input type="hidden" name="id" value="<%= data.id %>">
+                                        <div class="col-12 d-flex mt-3">
+                                            <div class="col-6 mt-2">
+                                                    <label for="name">Product Name</label>
+                                                    <input type="text" id="name" value="<%= data.name %>" name="name" class="form-control" placeholder="Enter name...">
+                                            </div>
+
+                                            <div class="col-6 mt-2">
+                                                <label for="description">Description</label>
+                                                <input type="text" class="form-control" value="<%= data.description %>" id="description" name="description" placeholder="Enter description...">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 d-flex mt-3">
+                                            
+                                            <div class="col-12 mt-2">
+                                                <label for="categoryid"> Category Name </label>
+                                                <select class="form-control" name="categoryid" id="categoryid">
+                                                    <% categories.forEach(x => { %>
+                                                        <option <%= data.categoryid == x.id ? 'selected' : '' %> value="<%= x.id %>"><%= x.name %></option>
+                                                    <% }) %>
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-12 d-flex mt-3">
+                                            <div class="col-6 mt-2">
+                                                <label for="old_image">Old Image</label>
+                                                <img style="width: 100px; height: 100px; object-fit: cover;" src="/uploads/<%= data.image %>" alt="photo">
+                                            </div>
+
+                                            <div class="col-6 mt-2">
+                                                <label for="image">New Image</label>
+                                                <input class="form-control" name="image" type="file" id="image" placeholder="Enter image file...">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 d-flex mt-3">
+                                            <div class="col-6 mt-2">
+                                                    <label for="isdeleted"> IsDeleted </label> 
+                                                        <select class="form-control" name="isdeleted" id="isdeleted">
+                                                            <option value="0" <%= data.isdeleted == 0 ? 'selected' : '' %>>Deaktiv</option>
+                                                            <option value="1" <%= data.isdeleted == 1 ? 'selected' : '' %>>Aktiv</option>
+                                                        </select>
+                                            </div>
+                                            <div class="col-6 mt-2">
+                                                    <label for="model"> Model </label> 
+                                                    <input type="text" value="<%= data.model %>" name="model" id="model" class="form-control" placeholder="Enter model....">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-12 d-flex mt-3">
+                                            <div class="col-4 mt-2">
+                                                    <label for="price">Price</label>
+                                                    <input type="number" value="<%= data.price %>" id="price" name="price" class="form-control" placeholder="Enter price...">
+                                            </div>
+
+                                            <div class="col-4 mt-2">
+                                                <label for="old_price">Old Price</label>
+                                                <input type="number" class="form-control" value="<%= data.old_price %>" id="old_price" name="old_price" placeholder="Enter old_price...">
+                                            </div>
+
+                                            <div class="col-4 mt-2">
+                                                <label for="date">Date</label>
+                                                <input type="datetime-local" value="<%= data.date %>" class="form-control" id="date" name="date" placeholder="Enter date...">
+                                            </div>
+                                        </div>
+
+                                            <div class="card-footer mt-5">
+                                                <div class="row">
+                                                    <div class="col-lg-5"></div>
+                                                    <div class="col-lg-7">
+                                                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                                                        <a href="/product"><button type="button" class="btn btn-secondary">Cancel</button></a>
+                                                    </div>
+                                            </div>
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<%- include('../layout/footer');  %>

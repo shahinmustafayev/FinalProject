@@ -33,8 +33,8 @@
                                         <div class="col-12 d-flex">
                                             
                                             <div class="col-6 mt-2">
-                                                <label for="category_name"> Category Name </label>
-                                                <select class="form-control" name="category_name" id="category_name">
+                                                <label for="categoryid"> Category Name </label>
+                                                <select class="form-control" name="categoryid" id="categoryid">
                                                 <% data.forEach(x => { %>
                                                     <option value="<%= x.id %>"><%= x.name %></option>
                                                 <% }) %>
@@ -43,7 +43,7 @@
 
                                             <div class="col-6 mt-2">
                                                 <label for="image">Image</label>
-                                                <input class="form-control" type="file" id="image" placeholder="Enter image file...">
+                                                <input class="form-control" name="image" type="file" id="image" placeholder="Enter image file...">
                                             </div>
 
                                         </div>
@@ -52,8 +52,8 @@
                                         <div class="col-12 d-flex">
 
                                             <div class="col-6 mt-2">
-                                                    <label for="isDeleted"> IsDeleted </label> 
-                                                        <select class="form-control" name="isDeleted" id="isDeleted">
+                                                    <label for="isdeleted"> IsDeleted </label> 
+                                                        <select class="form-control" name="isdeleted" id="isdeleted">
                                                             <option value="0">Deaktiv</option>
                                                             <option value="1">Aktiv</option>
                                                         </select>
@@ -61,21 +61,26 @@
 
                                             <div class="col-6 mt-2">
                                                 <label for="model"> Model </label> 
-                                                    <input type="text" name="model" class="form-control" placeholder="Enter model....">
+                                                    <input type="text" name="model" id="model" class="form-control" placeholder="Enter model....">
                                             </div>
 
                                         </div>
 
 
                                         <div class="col-12 d-flex">
-                                            <div class="col-6 mt-2">
+                                            <div class="col-4 mt-2">
                                                     <label for="price">Price</label>
                                                     <input type="number" id="price" name="price" class="form-control" placeholder="Enter price...">
                                             </div>
 
-                                            <div class="col-6 mt-2">
+                                            <div class="col-4 mt-2">
                                                 <label for="old_price">Old Price</label>
                                                 <input type="number" class="form-control" id="old_price" name="old_price" placeholder="Enter old_price...">
+                                            </div>
+
+                                            <div class="col-4 mt-2">
+                                                <label for="date">Old Price</label>
+                                                <input type="datetime-local" class="form-control" id="date" name="date" placeholder="Enter date...">
                                             </div>
                                         </div>
 
@@ -84,7 +89,7 @@
                                                     <div class="col-lg-5"></div>
                                                     <div class="col-lg-7">
                                                         <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                                                        <a href="/categories"><button type="button" class="btn btn-secondary">Cancel</button></a>
+                                                        <a href="/product"><button type="button" class="btn btn-secondary">Cancel</button></a>
                                                     </div>
                                             </div>
                                     </form>

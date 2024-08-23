@@ -8,6 +8,7 @@ class Product {
         this.price = datas?.price,
         this.old_price = datas?.old_price,
         this.categoryid = datas?.categoryid,
+        this.category_name = datas?.category_name,
         this.created_at = datas?.created_at,
         this.updated_at = datas?.updated_at,
         this.isdeleted = datas?.isdeleted
