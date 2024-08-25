@@ -1,0 +1,103 @@
+<%- include('../layout/header');  %>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <div class="card-header">
+                <div class="card-title">
+                    <h3>Blogs</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <div class="row mx-0 mt-2">
+                <div class="col-3">
+                    <a href="/blog/add" class="btn btn-primary btn-block">Add</a>
+                </div>
+                <div class="col-3 offset-6">
+                    <input type="text" placeholder="Search..." class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <div class="row mx-0 mt-3">
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Blogs</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Title</th>
+                                                <th>Description</th>
+                                                <th>Author</th>
+                                                <th>Date</th>
+                                                <th>Image</th>
+                                                <th>IsDeleted</th>
+                                                <th>Created_at</th>
+                                                <th>Updated_at</th>
+                                                <th>Operations</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% data.forEach(x => { %>
+                                                <tr>
+                                                    <td><%= x.title %></td>
+                                                    <td><%= x.description %></td>
+                                                    <td><%= x.author %></td>
+                                                    <td><%= new Date(x.date).toLocaleString('en-US', { 
+                                                            month: '2-digit', 
+                                                            day: '2-digit', 
+                                                            year: 'numeric', 
+                                                            hour12: false 
+                                                        }) %>
+                                                    </td>
+                                                    <td><img style="width: 100px; height: 100px; object-fit: cover;" src="/uploads/blog/<%= x.image %>" alt="photo"></td>
+                                                    <td><%= x.isdeleted %></td>
+                                                    <td>
+                                                        <%= new Date(x.created_at).toLocaleString('en-US', { 
+                                                            month: '2-digit', 
+                                                            day: '2-digit', 
+                                                            year: 'numeric', 
+                                                            hour: '2-digit', 
+                                                            minute: '2-digit', 
+                                                            hour12: false 
+                                                        }) %>
+                                                    </td>
+                                                    <td>
+                                                    <%= new Date(x.updated_at).toLocaleString('en-US', { 
+                                                        month: '2-digit', 
+                                                        day: '2-digit', 
+                                                        year: 'numeric', 
+                                                        hour: '2-digit', 
+                                                        minute: '2-digit', 
+                                                        hour12: false 
+                                                    }) %>
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-warning mt-4" href="/blog/edit/<%= x.id %>">Edit</a>
+                                                        <a class="btn btn-danger mt-4" href="/blog/delete/<%= x.id %>">Delete</a>
+                                                    </td>
+                                                </tr>
+                                            <% }) %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<%- include('../layout/footer');  %>

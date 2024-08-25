@@ -35,6 +35,13 @@ const CATEGORY_ADDED_SUCCESSFULLY = 'Category Added Successfully';
 const CATEGORY_DELETED_SUCCESSFULLY = 'Category Deleted Successfully';
 // Category End
 
+// Blog Start 
+const BLOG_FOUND_SUCCESSFULLY = 'Blog Found Successfully';
+const BLOG_NOT_FOUND = 'Blog Not Found';
+const BLOG_ADDED_SUCCESSFULLY = 'Blog Add Successfully';
+const BLOG_DELETED_SUCCESSFULLY = 'Blog Deleted Successfully';
+// Blog End 
+
 module.exports = {
     DATA_SUCCESSFULLY,
     DATA_ADD_SUCCESSFULLY,
@@ -56,5 +63,9 @@ module.exports = {
     CATEGORY_ADDED_SUCCESSFULLY,
     CATEGORY_DELETED_SUCCESSFULLY,
     CATEGORY_FOUND_SUCCESSFULLY,
-    CATEGORY_NOT_FOUND
+    CATEGORY_NOT_FOUND,
+    BLOG_ADDED_SUCCESSFULLY,
+    BLOG_DELETED_SUCCESSFULLY,
+    BLOG_FOUND_SUCCESSFULLY,
+    BLOG_NOT_FOUND
 }
