@@ -42,6 +42,15 @@ const BLOG_ADDED_SUCCESSFULLY = 'Blog Add Successfully';
 const BLOG_DELETED_SUCCESSFULLY = 'Blog Deleted Successfully';
 // Blog End 
 
+// Register start
+const REGISTERED_SUCCESSFULLY = "Registered Successfully";
+const INVALID_USERNAME = "Invalid username. It should be 4-30 characters long and can only contain letters, numbers, and underscores";
+const INVALID_PASSWORD = "Invalid password. It should be at least 8 characters long and contain at least one letter and one number";
+// Register end
+
+const DUBLICATE_USERNAME = "Dublicate Username";
+const USERNAME_ALREADY_TAKEN = 'Username already taken. Please choose another one.';
+
 module.exports = {
     DATA_SUCCESSFULLY,
     DATA_ADD_SUCCESSFULLY,
@@ -67,5 +76,10 @@ module.exports = {
     BLOG_ADDED_SUCCESSFULLY,
     BLOG_DELETED_SUCCESSFULLY,
     BLOG_FOUND_SUCCESSFULLY,
-    BLOG_NOT_FOUND
+    BLOG_NOT_FOUND,
+    REGISTERED_SUCCESSFULLY,
+    INVALID_USERNAME,
+    INVALID_PASSWORD,
+    DUBLICATE_USERNAME,
+    USERNAME_ALREADY_TAKEN
 }
