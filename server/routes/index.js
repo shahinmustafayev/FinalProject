@@ -7,10 +7,10 @@ const registerRoute = require('./register-route');
 const express = require('express');
 const router = express.Router();
 
-router.use('/', defaultRoute);
+router.use('/dashboard', defaultRoute);
 router.use('/categories' , categoryRoute);
 router.use('/product', productRoute);
-router.use('/blog', blogRoute);
+router.use('/blog', blogRoute); 
 router.use('/login' , loginRoute);
 router.use('/register' , registerRoute);
 
