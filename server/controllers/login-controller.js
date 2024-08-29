@@ -26,8 +26,12 @@ const loginUser = async (req, res) => {
     if (!match) {
         return res.render('login/index', { error: INVALID_PASSWORD });
     }
-    res.redirect('/dashboard');
+    // Session Username set
+    req.session = username;
+    const sessionUsername = req.session;
+    return res.render('index', { username: sessionUsername });
 };
+
 
 module.exports = {
     getLoginView,

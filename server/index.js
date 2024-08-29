@@ -1,7 +1,8 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const path = require('path');
-const routerMvc = require('../server/routes')
+const routerMvc = require('../server/routes');
+const session = require('express-session');
 
 dotenv.config();
 
@@ -19,5 +20,12 @@ app.use(express.static('public'));
 app.use(express.static('static'));
 
 app.use('/' , routerMvc);
+
+app.use(session({
+    secret: 'secret_key',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }  // Set secure: true if using HTTPS
+}));
 
 app.listen(PORT, () => console.log(`Server heard on ${PORT}`));
