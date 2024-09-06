@@ -6,6 +6,7 @@ import Header from './components/Header.js';
 import Footer from './components/Footer.js';
 import Slider from './components/Slider.js';
 import Products from './components/Products.js';
+import Testmonial from './components/Testmonial.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +14,7 @@ root.render(
     <Header />
     <Slider />
     <Products />
+    <Testmonial />
     <App />
     <Footer />
   </React.StrictMode>

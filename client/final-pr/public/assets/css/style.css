@@ -7470,3 +7470,13 @@ h3.cart-page-title {
   padding: 20px 0; }
 
 /*-------- Start My Account Page Wrapper --------*/
+
+.owl-loaded {
+  width: 100%;
+  height: auto;
+}
+
+/* .owl-loaded img{
+  width: 270px;
+  height: auto;
+} */
