@@ -19,7 +19,7 @@ const Header = () => {
                 <div className="row">
                     <div className="col-xl-2 col-lg-2 col">
                         <div className="logo pt-40">
-                            <a href="/#">
+                            <a href="/">
                                 <img src={logo} alt="logo" />
                             </a>
                         </div>
@@ -28,7 +28,7 @@ const Header = () => {
                         <div className="main-menu">
                             <nav>
                                 <ul>
-                                    <li className="angle-shape"><a href="/#">Home </a>
+                                    <li className="angle-shape"><a href="/">Home </a>
                                         <ul className="submenu">
                                             <li><a href="/#">Home version 1 </a></li>
                                             <li><a href="/#">Home version 2 </a></li>
@@ -103,101 +103,6 @@ const Header = () => {
                         </div>
                     </div>
                     {/* style={{display: 'none'}} */}
-                    <div className="col-xl-3 col-lg-3">
-                        <div className="header-right-wrap pt-40">
-                            <div className="header-search">
-                                <a className="search-active" href="/#"><i className="sli sli-magnifier"></i></a>
-                            </div>
-                            
-                            <div className="cart-wrap">
-                                <button className="icon-cart-active">
-                                    <span className="icon-cart">
-                                        <i className="sli sli-bag"></i>
-                                        <span className="count-style">02</span>
-                                    </span>
-                                    <span className="cart-price">
-                                        $320.00
-                                    </span>
-                                </button>
-                                <div className="shopping-cart-content">
-                                {/* handler={showProductData} onClick={showProductData} */}
-                                    <div className="shopping-cart-top">
-                                        <h4>Shoping Cart</h4>
-                                        <a className="cart-close" href="/#"><i className="sli sli-close"></i></a>
-                                    </div>
-                                    <ul>
-                                        <li className="single-shopping-cart">
-                                            <div className="shopping-cart-img">
-                                                <a href="/#"><img alt="photo" src={cart1} /></a>
-                                                <div className="item-close">
-                                                    <a href="/#"><i className="sli sli-close"></i></a>
-                                                </div>
-                                            </div>
-                                            <div className="shopping-cart-title">
-                                                <h4><a href="/#">Product Name </a></h4>
-                                                <span>1 x 90.00</span>
-                                            </div>
-                                        </li>
-                                        <li className="single-shopping-cart">
-                                            <div className="shopping-cart-img">
-                                                <a href="/#"><img alt="cart2" src={cart2} /></a>
-                                                <div className="item-close">
-                                                    <a href="/#"><i className="sli sli-close"></i></a>
-                                                </div>
-                                            </div>
-                                            <div className="shopping-cart-title">
-                                                <h4><a href="/#">Product Name</a></h4>
-                                                <span>1 x 90.00</span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div className="shopping-cart-bottom">
-                                        <div className="shopping-cart-total">
-                                            <h4>Total : <span className="shop-total">$260.00</span></h4>
-                                        </div>
-                                        <div className="shopping-cart-btn btn-hover text-center">
-                                            <a className="default-btn" href="/#">checkout</a>
-                                            <a className="default-btn" href="/#">view cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="setting-wrap">
-                                <button className="setting-active">
-                                    <i className="sli sli-settings"></i>
-                                </button>
-                                <div className="setting-content">
-                                    <ul>
-                                        <li>
-                                            <h4>Currency</h4>
-                                            <ul>
-                                                <li><a href="/#">USD</a></li>
-                                                <li><a href="/#">Euro</a></li>
-                                                <li><a href="/#">Real</a></li>
-                                                <li><a href="/#">BDT</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <h4>Language</h4>
-                                            <ul>
-                                                <li><a href="/#">English (US)</a></li>
-                                                <li><a href="/#">English (UK)</a></li>
-                                                <li><a href="/#">Spanish</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <h4>Account</h4>
-                                            <ul>
-                                                <li><a href="/#">Login</a></li>
-                                                <li><a href="/#">Creat Account</a></li>
-                                                <li><a href="/#">My Account</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
                 </div>
             </div>
         

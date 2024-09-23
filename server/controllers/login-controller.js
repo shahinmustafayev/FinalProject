@@ -27,9 +27,9 @@ const loginUser = async (req, res) => {
         return res.render('login/index', { error: INVALID_PASSWORD });
     }
     // Session Username set
-    req.session = username;
-    const sessionUsername = req.session;
-    return res.render('index', { username: sessionUsername });
+    // req.session = username;
+    // const sessionUsername = req.session;
+    return res.render('index');
 };
 
 
