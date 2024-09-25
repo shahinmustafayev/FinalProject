@@ -8,6 +8,7 @@ import BlogDetails from './components/BlogDetails';
 import Header from './components/Header';
 import Slider from './components/Slider';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         />
         <Route path="/testimonials" element={<Testmonial />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
         <Route
           path='/blog/:id'
           element={<BlogDetails />}

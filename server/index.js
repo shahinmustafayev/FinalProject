@@ -16,7 +16,14 @@ const PORT = process.env.PORT || 3004;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(cors());
+const corsOptions = {
+    origin: 'http://localhost:3000', // Replace with the correct frontend origin
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type'],
+};
+app.use(cors(corsOptions));
+
+// app.use(cors());
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 

@@ -1,0 +1,82 @@
+<%- include('../layout/header');  %>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <div class="card-header">
+                <div class="card-title">
+                    <h3>Contact</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <div class="row mx-0 mt-3">
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Contact</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Subject</th>
+                                                <th>Message</th>
+                                                <th>IsDeleted</th>
+                                                <th>Created_at</th>
+                                                <th>Updated_at</th>
+                                                <th>Operations</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% data.forEach(x => { %>
+                                                <tr>
+                                                    <td><%= x.name %></td>
+                                                    <td><%= x.email %></td>
+                                                    <td><%= x.subject %></td>
+                                                    <td><%= x.message %></td>
+                                                    <td><%= x.isdeleted %></td>
+                                                    <td>
+                                                        <%= new Date(x.created_at).toLocaleString('en-US', { 
+                                                            month: '2-digit', 
+                                                            day: '2-digit', 
+                                                            year: 'numeric', 
+                                                            hour: '2-digit', 
+                                                            minute: '2-digit', 
+                                                            hour12: false 
+                                                        }) %>
+                                                    </td>
+                                                    <td>
+                                                    <%= new Date(x.updated_at).toLocaleString('en-US', { 
+                                                        month: '2-digit', 
+                                                        day: '2-digit', 
+                                                        year: 'numeric', 
+                                                        hour: '2-digit', 
+                                                        minute: '2-digit', 
+                                                        hour12: false 
+                                                    }) %>
+                                                    </td>
+                                                    <td>
+                                                        <!-- <a class="btn btn-warning " href="/product/edit/<%= x.id %>">Edit</a> -->
+                                                        <a class="btn btn-danger ml-3" href="/contact/delete/<%= x.id %>">Delete</a>
+                                                    </td>
+                                                </tr>
+                                            <% }) %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<%- include('../layout/footer');  %>

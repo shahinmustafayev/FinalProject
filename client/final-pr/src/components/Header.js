@@ -29,14 +29,14 @@ const Header = () => {
                             <nav>
                                 <ul>
                                     <li className="angle-shape"><a href="/">Home </a>
-                                        <ul className="submenu">
+                                        {/* <ul className="submenu">
                                             <li><a href="/#">Home version 1 </a></li>
                                             <li><a href="/#">Home version 2 </a></li>
                                             <li><a href="/#">Home version 3 </a></li>
-                                        </ul>
+                                        </ul> */}
                                     </li>
-                                    <li className="angle-shape"><a href="/#"> Shop <span>new</span> </a>
-                                        <ul className="mega-menu">
+                                    <li className="angle-shape"><a href="/"> Shop <span>new</span> </a>
+                                        {/* <ul className="mega-menu">
                                             <li><a className="menu-title" href="/#"> Shop Layout</a>
                                                 <ul>
                                                     <li><a href="/#">standard style</a></li>
@@ -72,12 +72,12 @@ const Header = () => {
                                                     <li><a href="/#">Affiliate style</a></li>
                                                 </ul>
                                             </li>
-                                        </ul>
+                                        </ul> */}
                                     </li>
-                                    <li><a href="/#">Accessories <span>hot</span> </a></li>
-                                    <li><a href="/#"> Contact </a></li>
-                                    <li className="angle-shape"><a href="/#">Pages </a>
-                                        <ul className="submenu">
+                                    <li><a href="/">Accessories <span>hot</span> </a></li>
+                                    <li><a href="/contact"> Contact </a></li>
+                                    <li className="angle-shape"><a href="/">Pages </a>
+                                        {/* <ul className="submenu">
                                             <li><a href="/#">about us </a></li>
                                             <li><a href="/#">cart page </a></li>
                                             <li><a href="/#">checkout </a></li>
@@ -86,17 +86,17 @@ const Header = () => {
                                             <li><a href="/#">my account </a></li>
                                             <li><a href="/#">contact us </a></li>
                                             <li><a href="/#">login/register </a></li>
-                                        </ul>
+                                        </ul> */}
                                     </li>
-                                    <li className="angle-shape"><a href="/#"> Blog </a>
-                                        <ul className="submenu">
+                                    <li className="angle-shape"><a href="/"> Blog </a>
+                                        {/* <ul className="submenu">
                                             <li><a href="/#">standard style </a></li>
                                             <li><a href="/#">blog 2 column </a></li>
                                             <li><a href="/#">blog 3 column </a></li>
                                             <li><a href="/#">blog right sidebar </a></li>
                                             <li><a href="/#">blog details </a></li>
                                             <li><a href="/#">blog details right sidebar </a></li>
-                                        </ul>
+                                        </ul> */}
                                     </li>
                                 </ul>
                             </nav>

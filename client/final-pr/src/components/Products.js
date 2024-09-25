@@ -87,7 +87,8 @@ return (
                             <div className="ht-product-inner">
                                 <div className="ht-product-image-wrap">
                                 
-                                    <Link to={`/product/${item.id}`} onClick={() => handleProductClick(item)} style={{ width: '268px' , height: '268' }} className="ht-product-image">
+                                    <Link to={`/product/${item.id}`} onClick={() => handleProductClick(item)} style={{ width: '300px' , height: '300px' }} className="ht-product-image">
+                                    {/* width: '268px' */}
                                         <img src={`http://localhost:4444/uploads/${item.image}`} alt="Universal Product Style" />
                                     </Link>
                                     <div className="ht-product-action">
@@ -104,8 +105,8 @@ return (
                                         <div className="ht-product-categories"><Link to={`/product/${item.id}`}>Chair</Link></div>
                                         <h4 className="ht-product-title"><Link to={`/product/${item.id}`}>{item.name}</Link></h4>
                                         <div className="ht-product-price">
-                                            <span className="new">{`${item.price}.00 $`}</span>
-                                            <span className="old">{`${item.old_price}.00 $`}</span>
+                                            <span className="new">{`${item.price}.00 AZN`}</span>
+                                            <span className="old">{`${item.old_price}.00 AZN`}</span>
                                         </div>
 
                                         <div class="ht-product-ratting-wrap">

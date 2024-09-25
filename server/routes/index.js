@@ -11,6 +11,8 @@ const categoryApiRoute = require('./category-api-route');
 const productDetailsApiRoute = require('./product-details-api');
 const blogApiRoute = require('./blog-api-route');
 const blogDetailsApiRoute = require('./blog-details-api');
+const contactRoute = require('./contact-route');
+const contactApiRoute = require('./contact-api-route');
 const express = require('express');
 const router = express.Router();
 
@@ -27,5 +29,7 @@ router.use('/categoryData' , categoryApiRoute);
 router.use('/product', productDetailsApiRoute);
 router.use('/blogData' , blogApiRoute);
 router.use('/blog' , blogDetailsApiRoute);
+router.use('/contact' , contactRoute);
+router.use('/' , contactApiRoute);
 
 module.exports = router;
