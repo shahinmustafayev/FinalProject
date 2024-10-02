@@ -35,6 +35,7 @@ const Testmonial = () => {
                             touchDrag={true}
                             autoplay={true}
                             autoplayTimeout={4000}
+                            loop={true}
                         >
 
                         <div class="single-testimonial text-center">

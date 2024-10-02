@@ -1,11 +1,5 @@
 import React from 'react'
 import payment from '../assets/img/icon-img/payment.png'
-// import quickviewl1 from '../assets/img/product/quickview-l1.jpg'
-// import quickviewl2 from '../assets/img/product/quickview-l2.jpg'
-// import quickviewl3 from '../assets/img/product/quickview-l3.jpg'
-// import quickviews1 from '../assets/img/product/quickview-s1.jpg'
-// import quickviews2 from '../assets/img/product/quickview-s2.jpg'
-// import quickviews3 from '../assets/img/product/quickview-s3.jpg'
 
 const Footer = () => {
     return (
@@ -15,12 +9,12 @@ const Footer = () => {
             <div className="footer-top text-center pt-45 pb-45">
                 <nav>
                     <ul>
-                        <li><a href="index.html">Home </a></li>
-                        <li><a href="shop.html">Shop </a></li>
-                        <li><a href="shop.html">Accessories  </a></li>
-                        <li><a href="contact-us.html">Contact </a></li>
-                        <li><a href="about-us.html">About </a></li>
-                        <li><a href="blog.html">Blog </a></li>
+                        <li><a href="/">Home </a></li>
+                        <li><a href="/">Shop </a></li>
+                        <li><a href="/">Accessories  </a></li>
+                        <li><a href="/contact">Contact </a></li>
+                        <li><a href="/">About </a></li>
+                        <li><a href="/">Blog </a></li>
                     </ul>
                 </nav>
             </div>
@@ -30,10 +24,10 @@ const Footer = () => {
                 <div className="row align-items-center">
                     <div className="col-lg-4 col-md-5 col-12">
                         <div className="footer-social pb-20">
-                            <a href="#">Facebok</a>
-                            <a href="#">Twitter</a>
-                            <a href="#">Linkedin</a>
-                            <a href="#">Instagram</a>
+                            <a href="/">Facebok</a>
+                            <a href="/">Twitter</a>
+                            <a href="/">Linkedin</a>
+                            <a href="/">Instagram</a>
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-4 col-12">
@@ -43,7 +37,7 @@ const Footer = () => {
                     </div>
                     <div className="col-lg-4 col-md-3 col-12">
                         <div className="payment-mathod pb-20">
-                            <a href="#"><img src={payment} alt="" /></a>
+                            <a href="/"><img src={payment} /></a>
                         </div>
                     </div>
                 </div>
