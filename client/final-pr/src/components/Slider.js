@@ -9,12 +9,6 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import OwlCarousel from 'react-owl-carousel';
 
 const Slider = () => {
-
-    // const owlRef = useRef();
-    //     useEffect(() => {
-    //         owlRef.current.next();
-    // }, []);
-
     return (
         <div className="slider-area section-padding-1">
             <OwlCarousel
@@ -23,8 +17,7 @@ const Slider = () => {
                 nav={true}
                 items={1}
                 autoplay={true}
-                autoplayTimeout={4000}
-                // ref={owlRef}
+                autoplayTimeout={7000}
                 navText={['<i class="sli sli-arrow-left"></i>','<i class="sli sli-arrow-right"></i>']}
             >
                 <div className="single-slider slider-height-1 bg-paleturquoise item">
@@ -72,11 +65,6 @@ const Slider = () => {
                         <div class="owl-prev">prev</div>
                         <div class="owl-next">next</div>
                     </div>
-                    {/* <div class="owl-dots">
-                        <div class="owl-dot active"><span></span></div>
-                        <div class="owl-dot"><span></span></div>
-                        <div class="owl-dot"><span></span></div>
-                    </div> */}
                 </div>
             </OwlCarousel>
 

@@ -1,6 +1,3 @@
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel/dist/assets/owl.theme.default.css';
-// import OwlCarousel from 'react-owl-carousel';
 import { Link } from 'react-router-dom'
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -74,14 +71,6 @@ return (
 
                         <div className="ht-products product-slider-active owl-carousel owl-drag owl-loaded d-flex">
 
-                        {/* <OwlCarousel 
-                            className="owl-theme"
-                            loop={}
-                            margin={10}
-                            nav
-                            items={4} // Ürünleri 3'erli gösterebiliriz
-                        > */}
-
                             {filteredProducts.length > 0 && filteredProducts.map((item, index) => (
                                 <div className="ht-product ht-product-action-on-hover ht-product-category-right-bottom mb-30 mr-2" key={index}>
                                     <div className="ht-product-inner">
@@ -132,12 +121,9 @@ return (
                                 </div>
                             ))}
 
-                            {/* </OwlCarousel> */}
-
                         </div>
                     </div>
             </div>
-
         </div>
 
         <script src="../assets/js/vendor/jquery-1.12.4.min.js"></script>

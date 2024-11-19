@@ -6,14 +6,11 @@ import product8 from '../assets/img/product/product-8.jpg'
 import testi from "../assets/img/icon-img/testi.png";
 import testi1 from "../assets/img/testimonial/testi-1.png";
 import testi2 from "../assets/img/testimonial/testi-2.png";
-
 import banner4 from "../assets/img/banner/banner-4.png";
 import banner5 from "../assets/img/banner/banner-5.png";
-
 import freeShipping from "../assets/img/icon-img/free-shipping.png";
 import support from "../assets/img/icon-img/support.png";
 import security from "../assets/img/icon-img/security.png";
-
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import OwlCarousel from 'react-owl-carousel';

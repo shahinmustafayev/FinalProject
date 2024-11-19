@@ -13,7 +13,7 @@ const Footer = () => {
                         <li><a href="/">Shop </a></li>
                         <li><a href="/">Accessories  </a></li>
                         <li><a href="/contact">Contact </a></li>
-                        <li><a href="/">About </a></li>
+                        <li><a href="/">Pages </a></li>
                         <li><a href="/">Blog </a></li>
                     </ul>
                 </nav>
@@ -32,7 +32,7 @@ const Footer = () => {
                     </div>
                     <div className="col-lg-4 col-md-4 col-12">
                         <div className="copyright text-center pb-20">
-                            <p>Copyright © All Right Reserved</p>
+                            <p>Codelandia Mern Stack Final Project 2024</p>
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-3 col-12">
@@ -44,8 +44,6 @@ const Footer = () => {
             </div>
         </div>
     </footer>
-    
-   
         </div>
     )
 }

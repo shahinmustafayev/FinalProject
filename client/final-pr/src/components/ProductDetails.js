@@ -16,13 +16,13 @@ const ProductDetails = () => {
 
     const { id } = useParams();
     const [item, setItem] = useState([]);
-    const [loading, setLoading] = useState(true); // Yükleniyor durumu için bir state
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         axios.get(`http://localhost:4444/product/${id}`)
             .then(res => {
                 setItem(res.data);
-                setLoading(false); // Veri yüklendiğinde loading durumunu kapatın
+                setLoading(false);
             })
             .catch(err => {
                 console.error(err);
@@ -588,17 +588,11 @@ const ProductDetails = () => {
             <Footer />
 
             <script src="../assets/js/vendor/jquery-1.12.4.min.js"></script>
-
             <script src="../assets/js/popper.min.js"></script>
-
             <script src="../assets/js/bootstrap.min.js"></script>
-
             <script src="../assets/js/plugins.js"></script>
-
             <script src="../assets/js/ajax-mail.js"></script>
-
             <script src="../assets/js/main.js"></script>
-        
             </div>
     )
 }

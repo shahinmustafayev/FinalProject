@@ -6,7 +6,6 @@ import axios from 'axios'
 
 const BlogDetails = () => {
 
-    
     const { id } = useParams();
     const [item, setItem] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -121,16 +120,12 @@ const BlogDetails = () => {
                             <a href="#"> <i class="sli sli-arrow-left"></i> prev post</a>
                             <a href="#">next post <i class="sli sli-arrow-right"></i></a>
                         </div>
-                       
                     </div>
                 </div>
-              
             </div>
         </div>
-        </div>
-
+    </div>
         <Footer />
-
     </div>
   )
 }

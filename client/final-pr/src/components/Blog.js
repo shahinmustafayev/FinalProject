@@ -12,7 +12,7 @@ const Blog = () => {
     useEffect(() => {
         axios.get('http://localhost:4444/blogData')
             .then(response => {
-                console.log('API Response:', response.data);
+                // console.log('API Response:', response.data);
                 if (Array.isArray(response.data.data)) {
                     setBlogData(response.data.data);
                 } else {
